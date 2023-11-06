@@ -169,7 +169,7 @@ const Register = () => {
 
                         <Button fullWidth variant="contained" type='submit' >Register</Button>
                         <br/>
-                        <Button fullWidth variant="contained" onClick={handlelogin} >Login</Button>
+                        <Button fullWidth variant="Outlined"  onClick={handlelogin} >Login</Button>
 
                     </Box>
                 </Box>

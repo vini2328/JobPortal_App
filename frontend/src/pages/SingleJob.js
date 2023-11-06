@@ -17,8 +17,7 @@ const SingleJob = () => {
     const dispatch = useDispatch();
     const { singleJob, loading } = useSelector(state => state.singleJob)
     const { id } = useParams();
-    let role =JSON.parse(localStorage.getItem("userInfo"))
-    let adrole = role?.role
+
     useEffect(() => {
         dispatch(jobLoadSingleAction(id));
     }, [id]);
@@ -31,6 +30,7 @@ const SingleJob = () => {
             location: singleJob && singleJob.location
         }))
     }
+    let role =JSON.parse(localStorage.getItem("userInfo"))
 
     return (
         <>
@@ -74,7 +74,7 @@ const SingleJob = () => {
                             </Box>
                             <Box sx={{ flex: 1, p: 2 }}>
                                 <Card sx={{ p: 2, bgcolor: palette.primary.white }}>
-                                    <Button onClick={applyForAJob} sx={{ fontSize: "13px" }} variant='contained' disabled={adrole==1 ? true : false}>Apply for this Job</Button>
+                                    <Button onClick={applyForAJob} sx={{ fontSize: "13px" }} variant='contained' disabled={(role?.success===true? false : true)}>Apply for this Job</Button>
                                 </Card>
                             </Box>
 

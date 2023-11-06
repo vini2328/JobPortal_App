@@ -155,6 +155,15 @@ const Navbar = () => {
                             </Link>
                         </Button>
 
+                        <Button
+                            onClick={handleCloseNavMenu}
+                            sx={{ my: 2, color: 'white', display: 'block' }}>
+                            <Link to="/login" style={{ color: 'white', textDecoration: "none" }}>
+                                Login
+                            </Link>
+                        </Button>
+
+
 
                     </Box>
                     <IconButton sx={{ mr: 4 }} onClick={() => dispatch(toggleActionTheme())}>
