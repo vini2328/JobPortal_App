@@ -67,7 +67,7 @@ const sendTokenResponse = async (user, codeStatus, res) => {
 exports.logout = (req, res, next) => {
     console.log('this works')
     try {
-        res.clearCookie('token',{path:'/',domain: 'onrender.com'});
+        res.clearCookie('token',{path:'/',domain: 'jobapply.onrender.com'});
         res.status(200).json({
             success: true,
             message: "logged out"
